@@ -59,25 +59,39 @@ const HeroContent: React.FC = () => {
           </div>
         </div>
 
-        {/* New Section - Calendar Image */}
-        {/* <h2 className="font-montserrat text-2xl text-gray-900 mt-8 text-center xl:text-left">
-          Want to Volunteer? Look at the dates
-        </h2>
-        <div className="flex justify-center xl:justify-start mt-4">
-          <Image
-            src="/calendar.png"
-            alt="Calendar"
-            width={150}
-            height={150}
-            className="object-contain"
-          />
-        </div> */}
+        {/* Impact Statistics */}
+        <div className="flex flex-col gap-4 mt-8">
+          <h2 className="font-bebas text-5xl text-green-700">
+            <span className="text-gray-900">Impact</span> Statistics
+          </h2>
+          <div className="flex flex-col space-y-1">
+            <p className="text-base font-montserrat sm:text-lg lg:text-xl text-gray-500">Over 5000 meals distributed</p>
+            <p className="text-base font-montserrat sm:text-lg lg:text-xl text-gray-500">Supporting 200+ families</p>
+          </div>
+        </div>
+
+        {/* Upcoming Events */}
+        <div className="flex flex-col gap-4 mt-8">
+          <h2 className="font-bebas text-5xl text-green-700">
+            <span className="text-gray-900">Upcoming</span> Events
+          </h2>
+          <div className="flex flex-col">
+            <p className="text-base font-montserrat sm:text-lg lg:text-xl text-gray-500">
+              We keep conducting events and drives to help out the poor
+            </p>
+          </div>
+          <div className="flex justify-center xl:justify-start">
+            <button className="bg-green-700 text-white font-montserrat px-6 py-3 rounded-full hover:bg-green-800 transition">
+              Event Catalog
+            </button>
+          </div>
+        </div>
       </div>
       
       {/* Right Side - Video */}
-      <div className="w-full xl:w-1/2 flex justify-center">
+      <div className="w-full xl:w-1/2 flex justify-center xl:justify-end px-4">
         <video
-          className="rounded-3xl w-full xs:w-10/12 sm:w-8/12 md:w-6/12 lg:w-5/12 xl:w-9/12 h-auto"
+          className="rounded-3xl w-full sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-full h-auto"
           muted
           loop
           playsInline
