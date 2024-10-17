@@ -83,10 +83,15 @@ const NavbarContent = () => {
         <>
           <div onClick={closeMenu} className="fixed inset-0 bg-black opacity-50 z-40"></div>
           <div className="fixed top-0 right-0 w-4/5 max-w-xs h-full bg-white text-gray-900 font-bebas text-xl p-6 shadow-lg flex flex-col space-y-6 z-50">
-            <Link href="/" onClick={closeMenu}>
+            {/* Close Button for Mobile Menu */}
+            <button onClick={closeMenu} className="absolute top-3 right-4 text-2xl text-gray-900 z-50">
+              <X />
+            </button>
+
+            <Link href="/">
               <span className="hover:text-green-700 cursor-pointer tracking-tight">HOME</span>
             </Link>
-            <Link href="/about-us" onClick={closeMenu}>
+            <Link href="/about-us">
               <span className="hover:text-green-700 cursor-pointer tracking-tight">ABOUT US</span>
             </Link>
             <button onClick={toggleDropdown} className="hover:text-green-700 cursor-pointer tracking-tight flex items-center">
@@ -95,24 +100,24 @@ const NavbarContent = () => {
             </button>
             {dropdownOpen && (
               <div className="mt-2 bg-white text-gray-900 p-2 rounded shadow-lg z-20 space-y-2">
-                <Link href="/programs/score4change" onClick={closeMenu}>
+                <Link href="/programs/score4change">
                   <span className="block px-4 py-2 hover:text-green-700">Score4Change</span>
                 </Link>
-                <Link href="/programs/debate4change" onClick={closeMenu}>
+                <Link href="/programs/debate4change">
                   <span className="block px-4 py-2 hover:text-green-700">Debate4Change</span>
                 </Link>
               </div>
             )}
-            <Link href="/events" onClick={closeMenu}>
+            <Link href="/events">
               <span className="hover:text-green-700 cursor-pointer tracking-tight">EVENTS</span>
             </Link>
-            <Link href="/volunteer" onClick={closeMenu}>
+            <Link href="/volunteer">
               <span className="hover:text-green-700 cursor-pointer tracking-tight">VOLUNTEER</span>
             </Link>
-            <Link href="/contact-us" onClick={closeMenu}>
+            <Link href="/contact-us">
               <span className="hover:text-green-700 cursor-pointer tracking-tight">CONTACT US</span>
             </Link>
-            <Link href="/donate" onClick={closeMenu}>
+            <Link href="/donate">
               <button className="w-full py-2 bg-green-700 text-slate-100 font-bold rounded-full hover:text-white hover:bg-green-800 transition duration-200">
                 DONATE
               </button>
