@@ -5,7 +5,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-green-800 rounded-t-3xl text-white py-8 px-4">
+    <footer className="bg-green-800 mt-8 rounded-t-3xl text-white py-8 px-4">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Left Side - Logo and Name */}
         <div className="mb-4 md:mb-0 text-center md:text-left">

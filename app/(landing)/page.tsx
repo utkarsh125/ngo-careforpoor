@@ -1,4 +1,3 @@
-import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import Images from '../components/Images'
 import React from 'react'
@@ -10,7 +9,7 @@ const page = () => {
       <Hero />
       <Volunteer />
       <Images />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
