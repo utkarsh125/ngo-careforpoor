@@ -3,18 +3,18 @@ import React from 'react';
 const ContactUsPage: React.FC = () => {
   return (
     <section
-      className="relative min-h-screen py-16 px-6 bg-cover bg-center bg-no-repeat rounded-3xl"
+      className="relative min-h-screen py-16 px-6 bg-cover bg-center bg-no-repeat lg:rounded-3xl"
       style={{ backgroundImage: "url('/image6-bw.JPG')" }}
     >
-      <div className="max-w-7xl mx-auto  bg-opacity-80 rounded-3xl p-8 shadow-lg relative z-10">
+      <div className="max-w-7xl mx-auto bg-opacity-80 lg:rounded-3xl p-8 shadow-lg relative z-10">
         {/* Page Heading */}
         <h1 className="text-6xl font-bold font-bebas text-slate-100 text-center mb-12">
           Contact Us
         </h1>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Information */}
-          <div className="bg-white rounded-3xl shadow-lg p-8">
+          <div className="bg-white rounded-md sm:rounded-lg lg:rounded-3xl shadow-lg p-8">
             <h2 className="text-5xl font-bebas text-green-700 mb-4">Get in Touch</h2>
             <p className="text-lg text-gray-700 font-montserrat mb-4">
               We would love to hear from you! Please reach out to us through any of the methods below.
@@ -42,7 +42,7 @@ const ContactUsPage: React.FC = () => {
           </div>
 
           {/* Map Embed and Address */}
-          <div className="rounded-3xl overflow-hidden shadow-lg">
+          <div className="sm:rounded-lg rounded-md lg:rounded-3xl overflow-hidden shadow-lg">
             <iframe
               className="w-full h-96"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1750.9936558799446!2d77.22731532252002!3d28.61393974359901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd087a61cbbf%3A0xe9bc18b0c1678d5e!2sIndia%20Gate!5e0!3m2!1sen!2sin!4v1632951497954!5m2!1sen!2sin"

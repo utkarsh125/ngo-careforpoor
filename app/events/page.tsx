@@ -29,7 +29,7 @@ const EventCard: React.FC<{ event: Event }> = ({ event }) => {
   return (
     <div className="bg-green-100 p-4 rounded-lg shadow-sm mb-4">
       <div className="text-green-700 text-3xl font-semibold font-bebas">{event.title}</div>
-      <div className="text-gray-500">{event.date}</div>
+      <div className="text-gray-800">{event.date}</div>
       <p className="text-gray-700 mt-2 font-montserrat">{event.description}</p>
     </div>
   );

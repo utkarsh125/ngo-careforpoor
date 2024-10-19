@@ -81,9 +81,14 @@ const AboutPage = () => {
           <p className="text-lg text-gray-700 font-montserrat mb-8">
             Join us in making a difference! Whether through donations, volunteering, or spreading the word, your support can help transform lives.
           </p>
-          <button className="bg-green-700 text-white px-6 py-3 rounded-3xl text-lg hover:bg-green-600">
-            Donate Now
-          </button>
+          <div className='flex items-center gap-2 justify-center'>
+            <button className="bg-green-700 font-montserrat text-white px-6 py-3 rounded-3xl text-lg hover:bg-green-600">
+              Donate
+            </button>
+            <button className="bg-white font-montserrat text-gray-900 px-6 py-3 rounded-3xl text-lg hover:bg-black hover:text-white border border-black">
+              Volunteer
+            </button>
+          </div>
         </div>
       </div>
     </section>
