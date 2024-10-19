@@ -3,7 +3,7 @@ import React from 'react';
 
 const VolunteerContent: React.FC = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-12 py-12 rounded-3xl overflow-hidden h-96 xl:h-auto">
+    <section className="relative flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-12 py-12 sm:rounded-3xl lg:rounded-3xl overflow-hidden h-96 xl:h-auto">
       {/* Background Image */}
       <Image
         src="/volunteer.jpg"

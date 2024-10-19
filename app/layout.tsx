@@ -1,5 +1,3 @@
-// app/layout.tsx
-
 import './globals.css';
 
 import Footer from './components/Footer';
@@ -9,12 +7,17 @@ import { ReactNode } from 'react';
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <body className="bg-dark min-h-screen flex flex-col">
+        {/* Container for Navbar, Content, and Footer */}
+        <div className="flex-grow">
           <Navbar />
-          <main>{children}</main>
-          <Footer />
+          <div className="container mx-auto px-0 sm:px-4 lg:px-8">
+            <main>{children}</main>
+          </div>
         </div>
+        
+        {/* Footer always at the bottom */}
+        <Footer />
       </body>
     </html>
   );

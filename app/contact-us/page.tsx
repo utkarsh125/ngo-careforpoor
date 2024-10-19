@@ -6,9 +6,9 @@ const ContactUsPage: React.FC = () => {
       className="relative min-h-screen py-16 px-6 bg-cover bg-center bg-no-repeat rounded-3xl"
       style={{ backgroundImage: "url('/image6-bw.JPG')" }}
     >
-      <div className="max-w-7xl mx-auto bg-white bg-opacity-80 rounded-3xl p-8 shadow-lg relative z-10">
+      <div className="max-w-7xl mx-auto  bg-opacity-80 rounded-3xl p-8 shadow-lg relative z-10">
         {/* Page Heading */}
-        <h1 className="text-4xl font-bebas text-green-700 text-center mb-12">
+        <h1 className="text-6xl font-bold font-bebas text-slate-100 text-center mb-12">
           Contact Us
         </h1>
         

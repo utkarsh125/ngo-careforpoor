@@ -1,48 +1,66 @@
-import { Calendar } from "lucide-react";
+import Image from 'next/image';
+import React from 'react';
 
-const events = [
-  { date: "2024-11-12", title: "Health Awareness Campaign" },
-  { date: "2024-12-05", title: "Food Drive" },
-  { date: "2024-12-25", title: "Education Drive" },
+interface Event {
+  date: string;
+  title: string;
+  description: string;
+}
+
+const events: Event[] = [
+  {
+    date: 'Thu 14',
+    title: 'Food Distribution Drive',
+    description: 'Volunteers will help distribute meals to the homeless community.',
+  },
+  {
+    date: 'Fri 22',
+    title: 'Health Check-up Camp',
+    description: 'Free health check-ups will be conducted for underprivileged families.',
+  },
+  {
+    date: 'Mon 25',
+    title: 'Clothing Donation Event',
+    description: 'Winter clothes will be distributed to families in need.',
+  },
 ];
 
-const EventsPage = () => {
+const EventCard: React.FC<{ event: Event }> = ({ event }) => {
   return (
-    <section
-      className="min-h-screen py-16 px-4 bg-cover bg-center rounded-3xl"
-      style={{ backgroundImage: "url('/image6.JPG')" }}
-    >
-      <div className="max-w-7xl mx-auto bg-white bg-opacity-80 rounded-3xl p-8">
-        <header className="text-center mb-12">
-          <h1 className="text-4xl font-bebas text-green-700 mb-4">
-            Upcoming Campaigns
-          </h1>
-          <p className="text-lg text-gray-700 font-montserrat">
-            Join us in our efforts to make the world a better place.
-          </p>
-        </header>
+    <div className="bg-green-100 p-4 rounded-lg shadow-sm mb-4">
+      <div className="text-green-700 text-3xl font-semibold font-bebas">{event.title}</div>
+      <div className="text-gray-500">{event.date}</div>
+      <p className="text-gray-700 mt-2 font-montserrat">{event.description}</p>
+    </div>
+  );
+};
 
-        {/* Cards arranged vertically and taking full width */}
-        <div className="flex flex-col gap-8">
-          {events.map((event, index) => (
-            <div
-              key={index}
-              className="w-full bg-green-700 text-white rounded-3xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 hover:shadow-2xl transition-transform duration-300 ease-in-out"
-            >
-              <Calendar className="w-12 h-12 mb-4" />
-              <h2 className="text-2xl font-bebas mb-2">{event.title}</h2>
-              <p className="text-lg font-montserrat">
-                {new Date(event.date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </p>
-            </div>
-          ))}
+const EventsPage: React.FC = () => {
+  return (
+    <div className="max-w-7xl mx-auto p-6">
+      <h1 className="text-3xl text-green-700 font-bebas text-center mb-6">Upcoming Events</h1>
+      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-12">
+        {/* Event List on the Left */}
+        <div className="lg:w-1/2">
+          <div className="space-y-4">
+            {events.map((event, index) => (
+              <EventCard key={index} event={event} />
+            ))}
+          </div>
+        </div>
+
+        {/* Grayscale Image on the Right */}
+        <div className="lg:w-1/2">
+          <Image
+            src="/image4.JPG"
+            alt="Event image"
+            width={700}  // Specify a width
+            height={500}  // Specify a height
+            className="w-full h-auto rounded-lg grayscale"
+          />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
