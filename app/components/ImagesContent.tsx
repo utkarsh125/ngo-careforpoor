@@ -33,7 +33,7 @@ const ImagesContent: React.FC = () => {
     <div className="container mx-auto py-12 px-4">
       {/* Keep the heading and paragraph visible on all screen sizes */}
       <div className="mb-8 text-center">
-        <h2 className="font-bebas text-4xl text-green-700">Care4Poor</h2>
+        <h2 className="font-bebas text-4xl text-[#94ae81]">Care4Poor</h2>
         <p className="font-montserrat text-lg text-gray-700">
           We are committed to helping the poor with food, clothing, and essential resources.
         </p>

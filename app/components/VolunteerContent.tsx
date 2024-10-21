@@ -14,7 +14,7 @@ const VolunteerContent: React.FC = () => {
       />
       
       {/* Green Overlay */}
-      <div className="absolute inset-0 bg-green-700 bg-opacity-60"></div>
+      <div className="absolute inset-0 bg-[#94ae81] bg-opacity-60"></div>
       
       {/* Text Content */}
       <div className="relative z-10 space-y-4 p-6">

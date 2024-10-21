@@ -27,8 +27,8 @@ const events: Event[] = [
 
 const EventCard: React.FC<{ event: Event }> = ({ event }) => {
   return (
-    <div className="bg-green-100 p-4 rounded-lg shadow-sm mb-4">
-      <div className="text-green-700 text-3xl font-semibold font-bebas">{event.title}</div>
+    <div className="bg-[#94ae81] bg-opacity-20 p-4 rounded-lg shadow-sm mb-4">
+      <div className="text-[#94ae81] text-3xl font-semibold font-bebas">{event.title}</div>
       <div className="text-gray-800">{event.date}</div>
       <p className="text-gray-700 mt-2 font-montserrat">{event.description}</p>
     </div>
@@ -38,7 +38,7 @@ const EventCard: React.FC<{ event: Event }> = ({ event }) => {
 const EventsPage: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-6">
-      <h1 className="text-3xl text-green-700 font-bebas text-center mb-6">Upcoming Events</h1>
+      <h1 className="text-3xl text-[#94ae81] font-bebas text-center mb-6">Upcoming Events</h1>
       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-12">
         {/* Event List on the Left */}
         <div className="lg:w-1/2">

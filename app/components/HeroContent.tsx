@@ -8,8 +8,8 @@ const HeroContent: React.FC = () => {
       {/* Left Side - Text Content */}
       <div className="w-full xl:w-1/2 space-y-4 text-center xl:text-left">
         <h1 className="font-bebas text-5xl sm:text-6xl lg:text-7xl text-gray-900">
-          MAKE A <span className="text-green-700">DONATION</span> & <br />
-          <span className="text-green-700">HELP</span> THE POOR.
+          MAKE A <span className="text-[#94ae81]">DONATION</span> & <br />
+          <span className="text-[#94ae81]">HELP</span> THE POOR.
         </h1>
         <p className="font-montserrat text-base sm:text-lg lg:text-xl text-gray-500">
           For free time, when the choice is free for us to choose, and nothing prevents us from doing what we like best.
@@ -17,7 +17,7 @@ const HeroContent: React.FC = () => {
         
         {/* Buttons */}
         <div className="flex justify-center xl:justify-start space-x-4 mt-6">
-          <button className="bg-green-700 text-slate-100 font-montserrat px-6 py-3 rounded-full hover:bg-green-800 transition">
+          <button className="bg-[#94ae81] text-slate-100 font-montserrat px-6 py-3 rounded-full hover:bg-green-800 transition">
             Donate Now
           </button>
           <button className="border border-gray-900 text-gray-900 font-montserrat px-6 py-3 rounded-full hover:bg-gray-900 hover:text-white transition">
@@ -61,7 +61,7 @@ const HeroContent: React.FC = () => {
 
         {/* Impact Statistics */}
         <div className="flex flex-col gap-4 mt-8">
-          <h2 className="font-bebas text-5xl text-green-700">
+          <h2 className="font-bebas text-5xl text-[#94ae81]">
             <span className="text-gray-900">Impact</span> Statistics
           </h2>
           <div className="flex flex-col space-y-1">
@@ -72,7 +72,7 @@ const HeroContent: React.FC = () => {
 
         {/* Upcoming Events */}
         <div className="flex flex-col gap-4 mt-8">
-          <h2 className="font-bebas text-5xl text-green-700">
+          <h2 className="font-bebas text-5xl text-[#94ae81]">
             <span className="text-gray-900">Upcoming</span> Events
           </h2>
           <div className="flex flex-col">
@@ -81,7 +81,7 @@ const HeroContent: React.FC = () => {
             </p>
           </div>
           <div className="flex justify-center xl:justify-start">
-            <button className="bg-green-700 text-white font-montserrat px-6 py-3 rounded-full hover:bg-green-800 transition">
+            <button className="bg-[#94ae81] text-white font-montserrat px-6 py-3 rounded-full hover:bg-green-800 transition">
               Event Catalog
             </button>
           </div>

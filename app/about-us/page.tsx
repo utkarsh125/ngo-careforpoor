@@ -4,7 +4,7 @@ const AboutPage = () => {
   return (
     <section className="min-h-screen py-16 px-6">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bebas text-green-700 text-center mb-8">
+        <h1 className="text-4xl font-bebas text-[#94ae81] text-center mb-8">
           About Us
         </h1>
         <p className="text-lg text-gray-700 font-montserrat text-center mb-16">
@@ -17,7 +17,7 @@ const AboutPage = () => {
             className="relative rounded-3xl shadow-lg p-8 bg-cover bg-center"
             style={{ backgroundImage: "url('/about-us/mission.JPG')" }}
           >
-            <div className="absolute inset-0 bg-green-700 bg-opacity-50 rounded-3xl"></div>
+            <div className="absolute inset-0 bg-[#94ae81] bg-opacity-50 rounded-3xl"></div>
             <div className="relative z-10">
               <h2 className="text-3xl font-bebas text-white mb-4">Our Mission</h2>
               <p className="text-white text-lg font-montserrat">
@@ -31,7 +31,7 @@ const AboutPage = () => {
             className="relative rounded-3xl shadow-lg p-8 bg-cover bg-center"
             style={{ backgroundImage: "url('/about-us/vision.JPG')" }}
           >
-            <div className="absolute inset-0 bg-green-700 bg-opacity-50 rounded-3xl"></div>
+            <div className="absolute inset-0 bg-[#94ae81] bg-opacity-50 rounded-3xl"></div>
             <div className="relative z-10">
               <h2 className="text-3xl font-bebas text-white mb-4">Our Vision</h2>
               <p className="text-white text-lg font-montserrat">
@@ -47,7 +47,7 @@ const AboutPage = () => {
             className="relative rounded-3xl shadow-lg p-8 bg-cover bg-center"
             style={{ backgroundImage: "url('/about-us/what-we-do.JPG')" }}
           >
-            <div className="absolute inset-0 bg-green-700 bg-opacity-50 rounded-3xl"></div>
+            <div className="absolute inset-0 bg-[#94ae81] bg-opacity-50 rounded-3xl"></div>
             <div className="relative z-10">
               <h2 className="text-3xl font-bebas text-white mb-4">What We Do</h2>
               <p className="text-white text-lg font-montserrat">
@@ -61,7 +61,7 @@ const AboutPage = () => {
             className="relative rounded-3xl shadow-lg p-8 bg-cover bg-center"
             style={{ backgroundImage: "url('/about-us/values.JPG')" }}
           >
-            <div className="absolute inset-0 bg-green-700 bg-opacity-50 rounded-3xl"></div>
+            <div className="absolute inset-0 bg-[#94ae81] bg-opacity-50 rounded-3xl"></div>
             <div className="relative z-10">
               <h2 className="text-3xl font-bebas text-white mb-4">Our Values</h2>
               <ul className="text-white text-lg font-montserrat list-disc ml-6 space-y-2">
@@ -77,12 +77,12 @@ const AboutPage = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <h2 className="text-4xl font-bebas text-green-700 mb-8">Get Involved</h2>
+          <h2 className="text-4xl font-bebas text-[#94ae81] mb-8">Get Involved</h2>
           <p className="text-lg text-gray-700 font-montserrat mb-8">
             Join us in making a difference! Whether through donations, volunteering, or spreading the word, your support can help transform lives.
           </p>
           <div className='flex items-center gap-2 justify-center'>
-            <button className="bg-green-700 font-montserrat text-white px-6 py-3 rounded-3xl text-lg hover:bg-green-600">
+            <button className="bg-[#94ae81] font-montserrat text-white px-6 py-3 rounded-3xl text-lg hover:bg-green-600">
               Donate
             </button>
             <button className="bg-white font-montserrat text-gray-900 px-6 py-3 rounded-3xl text-lg hover:bg-black hover:text-white border border-black">
