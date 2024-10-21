@@ -1,5 +1,4 @@
-import { Facebook, Instagram, Twitter } from 'lucide-react';
-
+import { Instagram } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 
@@ -38,30 +37,9 @@ const Footer: React.FC = () => {
 
         {/* Right Side - Social Media Links */}
         <div className="flex justify-center space-x-6">
-          <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            <Facebook className="w-6 h-6" />
-          </a>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            <Twitter className="w-6 h-6" />
-          </a>
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
+          <Link href="https://www.instagram.com/care4poor/profilecard/?igsh=MWU4bWxlMHp5cmYxdA==" target="_blank" rel="noopener noreferrer" className="hover:underline">
             <Instagram className="w-6 h-6" />
-          </a>
+          </Link>
         </div>
       </div>
 

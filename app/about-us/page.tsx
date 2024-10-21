@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const AboutPage = () => {
@@ -81,13 +82,22 @@ const AboutPage = () => {
           <p className="text-lg text-gray-700 font-montserrat mb-8">
             Join us in making a difference! Whether through donations, volunteering, or spreading the word, your support can help transform lives.
           </p>
-          <div className='flex items-center gap-2 justify-center'>
-            <button className="bg-[#94ae81] font-montserrat text-white px-6 py-3 rounded-3xl text-lg hover:bg-green-600">
+          <div className="flex items-center gap-2 justify-center">
+            <Link href="/donate" className="bg-[#94ae81] font-montserrat text-white px-6 py-3 rounded-3xl text-lg hover:bg-green-600">
               Donate
-            </button>
-            <button className="bg-white font-montserrat text-gray-900 px-6 py-3 rounded-3xl text-lg hover:bg-black hover:text-white border border-black">
+            </Link>
+            <Link href="/volunteer" className="bg-white font-montserrat text-gray-900 px-6 py-3 rounded-3xl text-lg hover:bg-black hover:text-white border border-black">
               Volunteer
-            </button>
+            </Link>
+          </div>
+
+          {/* Instagram Link Button */}
+          <div className="mt-8">
+            <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <button className="bg-[#94ae81] font-montserrat text-white px-6 py-3 rounded-3xl text-lg hover:bg-green-600">
+                Follow Us on Instagram
+              </button>
+            </Link>
           </div>
         </div>
       </div>
