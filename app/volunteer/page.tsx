@@ -1,20 +1,19 @@
-"use client";
+import Link from 'next/link';
 
-import React from 'react';
-
-const FormPage: React.FC = () => {
+const VolunteerSection: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="max-w-md w-full bg-white p-8 rounded-3xl shadow-lg">
-        <h2 className="text-3xl font-bebas text-center text-[#94ae81] mb-6">
-          Contact Form
-        </h2>
-        <p className="text-lg text-gray-700 text-center font-montserrat mb-8">
-          This page is currently under progress. Please check back later.
-        </p>
-      </div>
-    </div>
+    <section className="flex flex-col items-center text-center p-6">
+      <h1 className="text-5xl font-bebas mb-4 text-[#94ae81]">
+        “Our Kindness, Their Hope!&quot;
+      </h1>
+      <p className="font-montserrat text-2xl mb-6 text-gray-900">
+        Thank you for your interest in volunteering with Care4Poor! We strive to empower underprivileged communities through key initiatives like Score4Change and Debate4Change. Join us to create lasting, meaningful change through education, sports, and public discourse.
+      </p>
+      <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdx6DjVHiMkUtDRiGDRxRWr9GCAMxMJYoZho7gVyhhKW0pPrA/viewform" passHref className="px-6 py-3 bg-[#94ae81] text-white font-montserrat rounded-3xl hover:opacity-90 transition-opacity">
+          Fill the Form
+      </Link>
+    </section>
   );
 };
 
-export default FormPage;
+export default VolunteerSection;

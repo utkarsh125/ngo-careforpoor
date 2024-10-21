@@ -6,43 +6,60 @@ import React from 'react';
 const Footer: React.FC = () => {
   return (
     <footer className="bg-[#94ae81] mt-8 text-white py-12 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
         {/* Left Side - Logo and Name */}
-        <div className="mb-4 md:mb-0 text-center md:text-left">
-          <h1 className="text-2xl font-bebas font-bold">Care4Poor</h1>
-          <p className="text-gray-200 font-montserrat">Making a difference together</p>
+        <div className="text-center md:text-left">
+          <h1 className="text-xl font-bebas font-bold">Care4Poor</h1>
+          <p className="text-gray-200 font-montserrat">
+            Making a difference together
+          </p>
         </div>
 
         {/* Center - Navigation Links */}
-        <div className="mb-4 md:mb-0 text-center">
-          <div className="space-x-6 font-montserrat">
-            <Link href="/" className="hover:underline">
+        <div className="text-center">
+          <div className="space-y-2 sm:space-y-0 sm:space-x-6 font-montserrat">
+            <Link href="/" className="hover:underline block sm:inline">
               Home
             </Link>
-            <Link href="/about-us" className="hover:underline">
+            <Link href="/about-us" className="hover:underline block sm:inline">
               About Us
             </Link>
-            <Link href="/volunteer" className="hover:underline">
+            <Link href="/volunteer" className="hover:underline block sm:inline">
               Volunteer
             </Link>
-            <Link href="/donate" className="hover:underline">
+            <Link href="/donate" className="hover:underline block sm:inline">
               Donate
             </Link>
-            <Link href="/contact-us" className="hover:underline">
+            <Link href="/contact-us" className="hover:underline block sm:inline">
               Contact Us
             </Link>
           </div>
         </div>
 
         {/* Right Side - Social Media Links */}
-        <div className="flex space-x-6 text-center">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
+        <div className="flex justify-center space-x-6">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
             <Facebook className="w-6 h-6" />
           </a>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
             <Twitter className="w-6 h-6" />
           </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
             <Instagram className="w-6 h-6" />
           </a>
         </div>

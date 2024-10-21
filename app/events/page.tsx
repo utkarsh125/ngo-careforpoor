@@ -38,7 +38,7 @@ const EventCard: React.FC<{ event: Event }> = ({ event }) => {
 const EventsPage: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-6">
-      <h1 className="text-3xl text-[#94ae81] font-bebas text-center mb-6">Upcoming Events</h1>
+      <h1 className="text-5xl text-[#94ae81] font-bebas text-center mb-6">Upcoming Events</h1>
       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-12">
         {/* Event List on the Left */}
         <div className="lg:w-1/2">
