@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Link } from 'lucide-react';
 import React from 'react';
 
 const VolunteerContent: React.FC = () => {
@@ -28,9 +29,9 @@ const VolunteerContent: React.FC = () => {
         
         {/* Call to Action Button */}
         <div className="flex justify-center mt-6">
-          <button className="bg-white text-green-700 font-montserrat px-6 py-3 rounded-full hover:bg-gray-100 transition">
+          <Link href='/volunteer' className="bg-white text-green-700 font-montserrat px-6 py-3 rounded-full hover:bg-gray-100 transition">
             Get Involved
-          </button>
+          </Link>
         </div>
       </div>
     </section>

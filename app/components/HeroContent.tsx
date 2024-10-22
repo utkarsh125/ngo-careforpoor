@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 // components/HeroContent.tsx
 import React from 'react';
 
@@ -17,12 +18,12 @@ const HeroContent: React.FC = () => {
         
         {/* Buttons */}
         <div className="flex justify-center xl:justify-start space-x-4 mt-6">
-          <button className="bg-[#94ae81] text-slate-100 font-montserrat px-6 py-3 rounded-full hover:bg-green-800 transition">
+          <Link href={`/donate`} className="bg-[#94ae81] text-slate-100 font-montserrat px-6 py-3 rounded-full hover:bg-green-800 transition">
             Donate Now
-          </button>
-          <button className="border border-gray-900 text-gray-900 font-montserrat px-6 py-3 rounded-full hover:bg-gray-900 hover:text-white transition">
+          </Link>
+          <Link href={`/programs`} className="border border-gray-900 text-gray-900 font-montserrat px-6 py-3 rounded-full hover:bg-gray-900 hover:text-white transition">
             Explore More
-          </button>
+          </Link>
         </div>
 
         {/* Image Row */}
@@ -81,9 +82,9 @@ const HeroContent: React.FC = () => {
             </p>
           </div>
           <div className="flex justify-center xl:justify-start">
-            <button className="bg-[#94ae81] text-white font-montserrat px-6 py-3 rounded-full hover:bg-green-800 transition">
+            <Link href={`/events`} className="bg-[#94ae81] text-white font-montserrat px-6 py-3 rounded-full hover:bg-green-800 transition">
               Event Catalog
-            </button>
+            </Link>
           </div>
         </div>
       </div>
