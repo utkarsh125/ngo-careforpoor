@@ -4,7 +4,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#94ae81] mt-8 text-white py-12 px-6">
+    <footer className="bg-[#94ae81] sm:mt-8 text-white py-12 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
         {/* Left Side - Logo and Name */}
         <div className="text-center md:text-left">

@@ -112,52 +112,52 @@ const NavbarContent: React.FC = () => {
       </div>
 
       {/* Mobile & Tablet Menu */}
-      {isOpen && (
-        <>
-          <div onClick={closeMenu} className="fixed inset-0 bg-black opacity-50 z-40"></div>
-          <div className="fixed top-0 right-0 w-4/5 max-w-xs h-full bg-white text-gray-900 font-bebas text-xl p-6 shadow-lg flex flex-col space-y-6 z-50">
-            {/* Close Button for Mobile & Tablet Menu */}
-            <button onClick={closeMenu} className="absolute top-3 right-4 text-2xl text-gray-900 z-50">
-              <X />
-            </button>
+      <div
+        className={`fixed top-0 right-0 w-4/5 max-w-xs h-full bg-white text-gray-900 font-bebas text-xl p-6 shadow-lg flex flex-col space-y-6 z-50 transition-transform duration-300 ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        {/* Close Button for Mobile & Tablet Menu */}
+        <button onClick={closeMenu} className="absolute top-3 right-4 text-2xl text-gray-900 z-50">
+          <X />
+        </button>
 
-            <Link href="/">
-              <span className="hover:text-[#94ae81] cursor-pointer tracking-tight" onClick={closeMenu}>HOME</span>
+        <Link href="/">
+          <span className="hover:text-[#94ae81] cursor-pointer tracking-tight" onClick={closeMenu}>HOME</span>
+        </Link>
+        <Link href="/about-us">
+          <span className="hover:text-[#94ae81] cursor-pointer tracking-tight" onClick={closeMenu}>ABOUT US</span>
+        </Link>
+        <button onClick={toggleDropdown} className="hover:text-[#94ae81] cursor-pointer tracking-tight flex items-center">
+          PROGRAMS
+          <ChevronDown className="ml-1 text-xl" />
+        </button>
+        {dropdownOpen && (
+          <div className="mt-2 bg-white text-gray-900 p-2 rounded shadow-lg z-20 space-y-2">
+            <Link href="/programs/score4change">
+              <span className="block px-4 py-2 hover:text-[#94ae81]" onClick={closeMenu}>Score4Change</span>
             </Link>
-            <Link href="/about-us">
-              <span className="hover:text-[#94ae81] cursor-pointer tracking-tight" onClick={closeMenu}>ABOUT US</span>
-            </Link>
-            <button onClick={toggleDropdown} className="hover:text-[#94ae81] cursor-pointer tracking-tight flex items-center">
-              PROGRAMS
-              <ChevronDown className="ml-1 text-xl" />
-            </button>
-            {dropdownOpen && (
-              <div className="mt-2 bg-white text-gray-900 p-2 rounded shadow-lg z-20 space-y-2">
-                <Link href="/programs/score4change">
-                  <span className="block px-4 py-2 hover:text-[#94ae81]" onClick={closeMenu}>Score4Change</span>
-                </Link>
-                <Link href="/programs/debate4change">
-                  <span className="block px-4 py-2 hover:text-[#94ae81]" onClick={closeMenu}>Debate4Change</span>
-                </Link>
-              </div>
-            )}
-            <Link href="/events">
-              <span className="hover:text-[#94ae81] cursor-pointer tracking-tight" onClick={closeMenu}>EVENTS</span>
-            </Link>
-            <Link href="/volunteer">
-              <span className="hover:text-[#94ae81] cursor-pointer tracking-tight" onClick={closeMenu}>VOLUNTEER</span>
-            </Link>
-            <Link href="/contact-us">
-              <span className="hover:text-[#94ae81] cursor-pointer tracking-tight" onClick={closeMenu}>CONTACT US</span>
-            </Link>
-            <Link href="/donate">
-              <button className="w-full py-2 bg-[#94ae81] text-slate-100 font-bold rounded-full hover:text-white hover:bg-green-800 transition duration-200" onClick={closeMenu}>
-                DONATE
-              </button>
+            <Link href="/programs/debate4change">
+              <span className="block px-4 py-2 hover:text-[#94ae81]" onClick={closeMenu}>Debate4Change</span>
             </Link>
           </div>
-        </>
-      )}
+        )}
+        <Link href="/events">
+          <span className="hover:text-[#94ae81] cursor-pointer tracking-tight" onClick={closeMenu}>EVENTS</span>
+        </Link>
+        <Link href="/volunteer">
+          <span className="hover:text-[#94ae81] cursor-pointer tracking-tight" onClick={closeMenu}>VOLUNTEER</span>
+        </Link>
+        <Link href="/contact-us">
+          <span className="hover:text-[#94ae81] cursor-pointer tracking-tight" onClick={closeMenu}>CONTACT US</span>
+        </Link>
+        <Link href="/donate">
+          <button className="w-full py-2 bg-[#94ae81] text-slate-100 font-bold rounded-full hover:text-white hover:bg-green-800 transition duration-200" onClick={closeMenu}>
+            DONATE
+          </button>
+        </Link>
+      </div>
+      {isOpen && <div onClick={closeMenu} className="fixed inset-0 bg-black opacity-50 z-40"></div>}
     </nav>
   );
 };
