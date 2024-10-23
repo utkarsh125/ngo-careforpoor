@@ -5,7 +5,7 @@ import React from 'react';
 const ProgramsPage: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8">
-      <h1 className="font-bebas text-4xl sm:text-5xl lg:text-6xl text-green-700 mb-8">
+      <h1 className="font-bebas text-4xl sm:text-5xl lg:text-6xl text-[#94ae81] mb-8">
         Our Programs
       </h1>
       

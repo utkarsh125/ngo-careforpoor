@@ -1,7 +1,8 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-const AboutPage = () => {
+const AboutPage: React.FC = () => {
   return (
     <section className="min-h-screen py-16 px-6">
       <div className="max-w-7xl mx-auto">
@@ -14,12 +15,18 @@ const AboutPage = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Our Mission */}
-          <div
-            className="relative rounded-3xl shadow-lg p-8 bg-cover bg-center"
-            style={{ backgroundImage: "url('/about-us/mission.JPG')" }}
-          >
-            <div className="absolute inset-0 bg-[#94ae81] bg-opacity-50 rounded-3xl"></div>
-            <div className="relative z-10">
+          <div className="relative rounded-3xl shadow-lg p-8">
+            <div className="absolute inset-0 z-0">
+              <Image
+                src="/about-us/mission.JPG"
+                alt="Mission"
+                fill
+                className="rounded-3xl object-cover grayscale"
+                priority
+              />
+            </div>
+            <div className="absolute inset-0 bg-black opacity-65 rounded-3xl z-10"></div>
+            <div className="relative z-20">
               <h2 className="text-3xl font-bebas text-white mb-4">Our Mission</h2>
               <p className="text-white text-lg font-montserrat">
                 Care4Poor strives to empower the underprivileged by providing access to basic necessities, education, healthcare, and support for a better quality of life. We believe in creating opportunities for everyone, regardless of their background.
@@ -28,12 +35,17 @@ const AboutPage = () => {
           </div>
 
           {/* Our Vision */}
-          <div
-            className="relative rounded-3xl shadow-lg p-8 bg-cover bg-center"
-            style={{ backgroundImage: "url('/about-us/vision.JPG')" }}
-          >
-            <div className="absolute inset-0 bg-[#94ae81] bg-opacity-50 rounded-3xl"></div>
-            <div className="relative z-10">
+          <div className="relative rounded-3xl shadow-lg p-8">
+            <div className="absolute inset-0 z-0">
+              <Image
+                src="/about-us/vision.JPG"
+                alt="Vision"
+                fill
+                className="rounded-3xl object-cover grayscale"
+              />
+            </div>
+            <div className="absolute inset-0 bg-black opacity-65 rounded-3xl z-10"></div>
+            <div className="relative z-20">
               <h2 className="text-3xl font-bebas text-white mb-4">Our Vision</h2>
               <p className="text-white text-lg font-montserrat">
                 We envision a world where poverty is eradicated, and every person has the chance to live a dignified and fulfilling life. Care4Poor seeks to be a beacon of hope, providing assistance where it’s needed most and advocating for social change.
@@ -44,12 +56,17 @@ const AboutPage = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
           {/* What We Do */}
-          <div
-            className="relative rounded-3xl shadow-lg p-8 bg-cover bg-center"
-            style={{ backgroundImage: "url('/about-us/what-we-do.JPG')" }}
-          >
-            <div className="absolute inset-0 bg-[#94ae81] bg-opacity-50 rounded-3xl"></div>
-            <div className="relative z-10">
+          <div className="relative rounded-3xl shadow-lg p-8">
+            <div className="absolute inset-0 z-0">
+              <Image
+                src="/about-us/what-we-do.JPG"
+                alt="What We Do"
+                fill
+                className="rounded-3xl object-cover grayscale"
+              />
+            </div>
+            <div className="absolute inset-0 bg-black opacity-65 rounded-3xl z-10"></div>
+            <div className="relative z-20">
               <h2 className="text-3xl font-bebas text-white mb-4">What We Do</h2>
               <p className="text-white text-lg font-montserrat">
                 Through various campaigns, including food drives, health awareness programs, and educational support, we aim to provide tangible solutions to the most pressing needs of impoverished communities. We work hand in hand with local partners and volunteers to reach those in need.
@@ -58,12 +75,17 @@ const AboutPage = () => {
           </div>
 
           {/* Our Values */}
-          <div
-            className="relative rounded-3xl shadow-lg p-8 bg-cover bg-center"
-            style={{ backgroundImage: "url('/about-us/values.JPG')" }}
-          >
-            <div className="absolute inset-0 bg-[#94ae81] bg-opacity-50 rounded-3xl"></div>
-            <div className="relative z-10">
+          <div className="relative rounded-3xl shadow-lg p-8">
+            <div className="absolute inset-0 z-0">
+              <Image
+                src="/about-us/values.JPG"
+                alt="Values"
+                fill
+                className="rounded-3xl object-cover grayscale"
+              />
+            </div>
+            <div className="absolute inset-0 bg-black opacity-65 rounded-3xl z-10"></div>
+            <div className="relative z-20">
               <h2 className="text-3xl font-bebas text-white mb-4">Our Values</h2>
               <ul className="text-white text-lg font-montserrat list-disc ml-6 space-y-2">
                 <li>Compassion</li>
@@ -93,7 +115,7 @@ const AboutPage = () => {
 
           {/* Instagram Link Button */}
           <div className="mt-8">
-            <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.instagram.com/care4poor/profilecard/?igsh=MWU4bWxlMHp5cmYxdA==" target="_blank" rel="noopener noreferrer">
               <button className="bg-[#94ae81] font-montserrat text-white px-6 py-3 rounded-3xl text-lg hover:bg-green-600">
                 Follow Us on Instagram
               </button>

@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import Image from 'next/image';
 import gsap from 'gsap';
@@ -17,21 +17,25 @@ const images = [
 ];
 
 const ImagesContent: React.FC = () => {
+  const imageContainerRef = useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
-    gsap.fromTo(
-      '.bento-grid img',
-      { opacity: 0, y: 20 },
-      {
-        opacity: 1,
-        y: 0,
-        stagger: 0.2,
+    // GSAP to create automatic sliding
+    const containerWidth = imageContainerRef.current?.scrollWidth || 0;
+    gsap.to(imageContainerRef.current, {
+      x: `-${containerWidth - window.innerWidth}px`,
+      ease: "linear",
+      duration: 100,
+      repeat: -1,
+      modifiers: {
+        x: (x) => `${parseFloat(x) % containerWidth}px`
       }
-    );
+    });
   }, []);
 
   return (
-    <div className="container mx-auto py-12 px-4">
-      {/* Keep the heading and paragraph visible on all screen sizes */}
+    <div className="container mx-auto py-12 px-4 sm:rounded-2xl lg:rounded-3xl overflow-hidden">
+      {/* Heading and paragraph */}
       <div className="mb-8 text-center">
         <h2 className="font-bebas text-4xl text-[#94ae81]">Care4Poor</h2>
         <p className="font-montserrat text-lg text-gray-700">
@@ -39,37 +43,21 @@ const ImagesContent: React.FC = () => {
         </p>
       </div>
 
-      {/* Grid layout that adapts to screen sizes */}
-      <div className="bento-grid grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {/* First 4 images will be visible on all screens */}
-        {images.slice(0, 4).map((src, index) => (
+      {/* Full-width images with horizontal sliding */}
+      <div
+        className="flex space-x-4"
+        ref={imageContainerRef}
+      >
+        {images.map((src, index) => (
           <div
             key={index}
-            className="relative w-full h-48 sm:h-64 md:h-72 lg:h-80 overflow-hidden rounded-3xl"
+            className="relative flex-shrink-0 w-full h-72 md:h-96 lg:h-[500px] overflow-hidden rounded-3xl"
           >
             <Image
               src={src}
               alt={`image-${index + 1}`}
               fill
-              className="transition-transform duration-500 ease-in-out transform translate-y-8 object-cover grayscale hover:grayscale-0"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-500">
-              {/* Optional text overlay */}
-            </div>
-          </div>
-        ))}
-
-        {/* Last 4 images are hidden on mobile, visible on md and larger */}
-        {images.slice(4).map((src, index) => (
-          <div
-            key={index}
-            className="relative w-full h-48 sm:h-64 md:h-72 lg:h-80 overflow-hidden rounded-3xl hidden md:block"
-          >
-            <Image
-              src={src}
-              alt={`image-${index + 5}`} // Adjust index for correct alt text
-              fill
-              className="transition-transform duration-500 ease-in-out transform translate-y-8 object-cover grayscale hover:grayscale-0"
+              className="transition-transform duration-500 ease-in-out object-cover grayscale hover:grayscale-0"
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-500">
               {/* Optional text overlay */}
