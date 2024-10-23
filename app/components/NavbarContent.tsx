@@ -5,13 +5,12 @@ import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation'; // Updated import from next/navigation
+import { useRouter } from 'next/navigation';
 
 const NavbarContent: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
-  const [mounted, setMounted] = useState<boolean>(false); // State to track if the component is mounted
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [mounted, setMounted] = useState<boolean>(false);
   const router = useRouter();
 
   const toggleMenu = (): void => {
@@ -27,29 +26,25 @@ const NavbarContent: React.FC = () => {
     setDropdownOpen(false);
   };
 
-  // Close mobile menu on route change
   useEffect(() => {
     if (mounted) {
       const handleRouteChange = (): void => {
         closeMenu();
       };
-
-      // Simulating the route change handling in new navigation API
       handleRouteChange();
 
       return () => {
-        // Cleanup if necessary, depending on how your navigation works in Next.js 14+
+        // Cleanup if necessary
       };
     }
   }, [mounted]);
 
-  // Set mounted to true when the component is mounted on the client side
   useEffect(() => {
     setMounted(true);
   }, []);
 
   if (!mounted) {
-    return null; // Return null until the component is mounted on the client side
+    return null;
   }
 
   return (
@@ -78,7 +73,7 @@ const NavbarContent: React.FC = () => {
             <ChevronDown className="ml-1" />
           </button>
           {dropdownOpen && (
-            <div className="absolute left-0 mt-2 bg-white text-gray-900 p-2 rounded shadow-lg z-20">
+            <div className="absolute left-0 mt-2 bg-white text-gray-900 p-2 rounded shadow-lg z-30">
               <Link href="/programs/score4change">
                 <span className="block px-4 py-2 hover:text-[#94ae81]">Score4Change</span>
               </Link>
@@ -113,9 +108,10 @@ const NavbarContent: React.FC = () => {
 
       {/* Mobile & Tablet Menu */}
       <div
-        className={`fixed top-0 right-0 w-4/5 max-w-xs h-full bg-white text-gray-900 font-bebas text-xl p-6 shadow-lg flex flex-col space-y-6 z-50 transition-transform duration-300 ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed top-0 left-0 w-full bg-white text-gray-900 font-bebas text-xl p-6 shadow-lg flex flex-col space-y-6 z-50 transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
         }`}
+        style={{ overflow: isOpen ? 'visible' : 'hidden' }}
       >
         {/* Close Button for Mobile & Tablet Menu */}
         <button onClick={closeMenu} className="absolute top-3 right-4 text-2xl text-gray-900 z-50">
@@ -133,7 +129,7 @@ const NavbarContent: React.FC = () => {
           <ChevronDown className="ml-1 text-xl" />
         </button>
         {dropdownOpen && (
-          <div className="mt-2 bg-white text-gray-900 p-2 rounded shadow-lg z-20 space-y-2">
+          <div className="mt-2 bg-white text-gray-900 p-2 rounded shadow-lg z-40 space-y-2">
             <Link href="/programs/score4change">
               <span className="block px-4 py-2 hover:text-[#94ae81]" onClick={closeMenu}>Score4Change</span>
             </Link>

@@ -13,6 +13,7 @@ const ContactUsPage: React.FC = () => {
           layout="fill"
           objectFit="cover"
           priority={true}
+          className='opacity-100'
         />
       </div>
 
