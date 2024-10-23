@@ -5,13 +5,13 @@ import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation';
 
 const NavbarContent: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
   const [mounted, setMounted] = useState<boolean>(false);
-  const router = useRouter();
+  // const router = useRouter();
 
   const toggleMenu = (): void => {
     setIsOpen(!isOpen);
