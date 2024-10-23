@@ -9,9 +9,13 @@ const Footer: React.FC = () => {
         {/* Left Side - Logo and Name */}
         <div className="text-center md:text-left">
           <h1 className="text-xl font-bebas font-bold">Care4Poor</h1>
-          <p className="text-gray-200 font-montserrat">
-            Making a difference together
-          </p>
+          <div className='flex flex-col text-gray-100 font-montserrat'>
+            <p className="">
+              Making a difference together
+            </p>
+            <Link href={'tel:7838295296'}>+91 78382 95296</Link>
+            <Link href={'mailto:care4poor@gmail.com'}>care4poor@gmail.com</Link>
+          </div>
         </div>
 
         {/* Center - Navigation Links */}

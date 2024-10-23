@@ -13,7 +13,7 @@ const AboutPage: React.FC = () => {
           At Care4Poor, we are dedicated to making a meaningful impact in the lives of those in need. Our mission is to provide support, resources, and hope to the underprivileged and marginalized communities through various outreach programs and campaigns.
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10"> {/* Adjusted gap */}
           {/* Our Mission */}
           <div className="relative rounded-3xl shadow-lg p-8">
             <div className="absolute inset-0 z-0">
@@ -54,7 +54,7 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-9"> {/* Adjusted gap */}
           {/* What We Do */}
           <div className="relative rounded-3xl shadow-lg p-8">
             <div className="absolute inset-0 z-0">

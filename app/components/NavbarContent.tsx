@@ -53,7 +53,7 @@ const NavbarContent: React.FC = () => {
   }
 
   return (
-    <nav className="relative flex items-center justify-between p-4 bg-transparent text-gray-900 font-bebas text-2xl lg:text-2xl z-50">
+    <nav className="sticky top-0 flex items-center justify-between p-4 bg-transparent text-gray-900 font-bebas text-2xl lg:text-2xl z-50 backdrop-blur-lg bg-white/70">
       {/* Logo (Redirect to Home) */}
       <div className="flex items-center space-x-2 z-50">
         <Link href="/" onClick={closeMenu}>
