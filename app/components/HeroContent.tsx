@@ -45,7 +45,7 @@ const HeroContent: React.FC = () => {
               width={200}
               height={300}
               className="rounded-3xl filter grayscale object-cover"
-              loading="lazy"
+              priority
             />
           </div>
           <div className="w-1/3">
@@ -55,7 +55,7 @@ const HeroContent: React.FC = () => {
               width={200}
               height={300}
               className="rounded-3xl filter grayscale object-cover"
-              loading="lazy"
+              priority
             />
           </div>
         </div>
