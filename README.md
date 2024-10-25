@@ -35,4 +35,4 @@ As a full-stack developer, I developed the entire website for Care4Poor, incorpo
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/Care4Poor.git
+   git clone https://github.com/utkarsh125/Care4Poor.git
