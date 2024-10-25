@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Care4Poor
 
-## Getting Started
+Care4Poor is a non-profit organization website created to showcase the NGO's mission, events, and opportunities for donations and volunteer participation. The project was developed from scratch, focusing on delivering a modern, responsive, and user-friendly platform to engage the community and facilitate support for the organization’s initiatives.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [Contact](#contact)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+As a full-stack developer, I developed the entire website for Care4Poor, incorporating design, interactivity, and seamless user experience. This freelance project prioritizes accessibility, optimized loading times, and a professional interface to elevate user engagement and streamline interaction for supporters of the NGO.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- **Hero Section**: Engaging introduction with video and images promoting Care4Poor’s mission and vision.
+- **Events Management**: Admin-only access for updating event dates in the `/events` section.
+- **Volunteer & Donation Call-to-Actions**: Clear, compelling calls to action for users to donate or volunteer.
+- **Image Gallery**: A dynamic bento grid gallery with overlaid text, featuring images relevant to the NGO's projects.
+- **Responsive Navbar**: Hamburger menu for mobile devices, enhanced with top-to-bottom animation and backdrop blur effects.
+- **Footer**: Black gradient footer with essential links and NGO information.
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Frontend**: [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), [Tailwind CSS](https://tailwindcss.com/), [GSAP](https://greensock.com/gsap/), [Ant Design](https://ant.design/), [lucide-react](https://lucide.dev/)
+- **Backend**: [Express.js](https://expressjs.com/), TypeScript, Authentication for secured access
+- **Others**: API integrations, LLMs for virtual cold mailing functionality (optional), performance optimizations
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Installation
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/Care4Poor.git
